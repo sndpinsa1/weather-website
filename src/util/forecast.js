@@ -12,8 +12,8 @@ const forecast = (lat, lng, callback)=>{
             callback("Please provide correct langitude and latitude",undefined);
 
         }else{
-            const {temperature, feelslike} = body.current;
-            const result = `It is currently ${temperature} degree out. There is feelislike ${feelslike}`
+            const {temperature, feelslike, humidity} = body.current;
+            const result = `It is currently ${temperature} degree out. There is feelislike ${feelslike} and humidity is ${humidity}`
             callback(undefined,result);
         }
     })
